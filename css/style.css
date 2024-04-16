@@ -1,0 +1,83 @@
+@import url('https://fonts.googleapis.com/css?family=Jost');
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Jost', sans-serif;
+}
+
+html,body{
+    height: 100%;
+    width: 100%;
+}
+
+main{
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url(../img/avatar-2-2022-4k-ts.jpg);
+    background-position: center;
+    background-size: cover;
+    transition: .4s;
+}
+
+main::before{
+    content: '';
+    width: 100%;
+    height: 100vh;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.7);
+    z-index: 0;
+}
+
+.slider-container{
+    position: relative;
+    width: 70vw;
+    height: 70vh;
+}
+.sliders{
+    overflow: hidden;
+    width: 100%;
+    height: 100%;
+    position: relative;
+    z-index: 1;
+}
+.slider{
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+    position: absolute;
+    top: -15vh;
+    left: -15vw;
+    background-position: center;
+    background-size: cover;
+    display: none;
+}
+
+.slider.active{
+    display: block;
+}
+
+.btn{
+    position: absolute;
+    border: 2px solid orange;
+    background: transparent;
+    color: white;
+    font-size: 2rem;
+    padding: 1rem 1.5rem;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.left-btn{
+    left: -70px;
+}
+
+.right-btn{
+    right: -70px;
+}
